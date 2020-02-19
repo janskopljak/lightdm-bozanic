@@ -52,11 +52,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: "Inter";
   font-weight: normal;
   font-size: 16px;
-
   text-align: left;
 }
 </style>

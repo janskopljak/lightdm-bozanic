@@ -1,12 +1,12 @@
 <template>
-  <div class="login" :class="{ 'compact': isCompact }">
+  <div class="login" :class="{ compact: isCompact }">
     <Clock :small="true" v-if="isCompact" />
 
     <div id="login-content" :class="{ 'no-avatar': settings.disableAvatar }">
       <div id="avatar" v-if="!settings.disableAvatar">
         <img
           id="avatar-image"
-          :class="{ 'round': settings.roundAvatar }"
+          :class="{ round: settings.roundAvatar }"
           :src="avatar(settings.user.image)"
         />
       </div>
@@ -26,14 +26,14 @@
             v-model="password"
             :placeholder="passwordLabel"
             :readonly="logging"
-            :class="{'error': error}"
+            :class="{ error: error }"
+            v-theming="['border-bottom-color']"
           />
         </form>
-
         <div v-else id="password" class="immutable"></div>
-        <div id="info">{{ info }}</div>
-
-        <!-- <SelectItem mode="desktop" :item="settings.desktop" @select="!immutable && $router.push('/base/select/desktop')" /> -->
+        <div id="info">
+          {{ info }}
+        </div>
       </div>
     </div>
 
@@ -42,13 +42,21 @@
 
       <transition name="power-fade">
         <div id="power-list" v-if="powerList">
-          <PowerButton v-if="canSuspend" id="suspend" type="suspend"></PowerButton>
+          <PowerButton
+            v-if="canSuspend"
+            id="suspend"
+            type="suspend"
+          ></PowerButton>
           <PowerButton id="reboot" type="restart"></PowerButton>
         </div>
       </transition>
 
       <div @click="powerList = !powerList">
-        <PowerButton id="shutdown" type="shutdown" :disabled="!powerList"></PowerButton>
+        <PowerButton
+          id="shutdown"
+          type="shutdown"
+          :disabled="!powerList"
+        ></PowerButton>
       </div>
     </div>
   </div>

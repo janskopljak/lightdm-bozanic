@@ -1,4 +1,5 @@
 [theme]
 name=eh8
-engine=lightdm-webkit-greeter
+description=eh8's LightDM Webkit2 theme.
+engine=lightdm-webkit2-greeter
 url=index.html

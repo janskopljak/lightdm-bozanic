@@ -68,7 +68,7 @@ export default {
 
   padding: 10px 10px 10px;
 
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
 }
 </style>
