@@ -1,4 +1,4 @@
-# eh8's Litarvan's LightDM WebKit2 theme
+# bozanic's eh8's Litarvan's LightDM WebKit2 theme
 
 ![](demo.png)
 
